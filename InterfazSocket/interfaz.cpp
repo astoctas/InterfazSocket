@@ -224,7 +224,10 @@ namespace interfaz {
 	}
 
 	std::vector<uint8_t> Interfaz::i2cValue(std::string name, uint16_t _register) {
-		return _i2c.find(name)->second->getData(_register);
+		i2c_message_mtx.lock();
+		std::vector<uint8_t> res  =  _i2c.find(name)->second->getData(_register);
+		i2c_message_mtx.unlock();
+		return res;
 	}
 
 	void Interfaz::i2cWrite(std::string name, uint16_t _register, std::vector<uint8_t> data) {
