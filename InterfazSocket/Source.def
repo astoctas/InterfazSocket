@@ -1,0 +1,35 @@
+LIBRARY InterfazSocket
+
+EXPORTS
+	connectSocket
+	disconnectSocket
+	outputs
+	output
+	outputsOn
+	outputsOff
+	outputsReverse
+	outputsBrake
+	outputsDir
+	outputsSpeed
+	servo
+	servosPosition
+	steppers
+	stepper
+	steppersSteps
+	steppersStop
+	steppersDir
+	steppersSpeed
+	steppersStatus
+	analogOn
+	analogOff
+	analogValue
+	device
+	deviceCall
+	deviceEvent
+	deviceGetValue
+	i2c
+	i2cReport
+	i2cRead
+	i2cValue
+	i2cWrite
+	restart
